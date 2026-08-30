@@ -1493,6 +1493,7 @@ button:active {
 
 <div class="question" id="healthCardQuestion">
     <div class="question-title" id="q3Text">3. 健保卡是否同意放在醫院？</div>
+    <div class="notice" id="q3Notice">※ 如果沒有帶健保卡，請選擇「否」。</div>
 
     <div class="radio-group">
         <div class="radio-item">
@@ -1861,6 +1862,7 @@ const translations = {
         q2: "2. 是否同意隔壁床為不同性別？",
         q2Notice: "若全院滿床且不同意，可能會在急診等待較久。",
         q3: "3. 健保卡是否同意放在醫院？",
+        q3Notice: "※ 如果沒有帶健保卡，請選擇「否」。",
         yes: "是",
         no: "否",
         preference: "病房志願順序",
@@ -1901,6 +1903,7 @@ const translations = {
         q2: "2. Do you agree to have a patient of a different sex in the adjacent bed?",
         q2Notice: "If the hospital is full and you do not agree, the patient may need to wait longer in the Emergency Department.",
         q3: "3. Do you agree to leave the NHI card at the hospital?",
+        q3Notice: "※ If you did not bring the NHI card, please select “No”.",
         yes: "Yes",
         no: "No",
         preference: "Room Preference Ranking",
@@ -1941,6 +1944,7 @@ const translations = {
         q2: "2. Apakah Anda setuju jika pasien di tempat tidur sebelah berbeda jenis kelamin?",
         q2Notice: "Jika seluruh rumah sakit penuh dan Anda tidak setuju, pasien mungkin harus menunggu lebih lama di Instalasi Gawat Darurat.",
         q3: "3. Apakah Anda setuju kartu asuransi kesehatan dititipkan di rumah sakit?",
+        q3Notice: "※ Jika Anda tidak membawa kartu Asuransi Kesehatan Nasional, silakan pilih “Tidak”.",
         yes: "Ya",
         no: "Tidak",
         preference: "Urutan pilihan kamar",
@@ -1981,6 +1985,7 @@ const translations = {
         q2: "2. Bạn có đồng ý nếu giường bên cạnh là bệnh nhân khác giới không?",
         q2Notice: "Nếu toàn bệnh viện hết giường và bạn không đồng ý, bệnh nhân có thể phải chờ lâu hơn tại khoa Cấp cứu.",
         q3: "3. Bạn có đồng ý để thẻ bảo hiểm y tế tại bệnh viện không?",
+        q3Notice: "※ Nếu không mang theo thẻ Bảo hiểm Y tế, vui lòng chọn “Không”.",
         yes: "Có",
         no: "Không",
         preference: "Thứ tự nguyện vọng phòng",
@@ -2021,6 +2026,7 @@ const translations = {
         q2: "2. ยินยอมให้เตียงข้างเคียงเป็นผู้ป่วยต่างเพศหรือไม่?",
         q2Notice: "หากเตียงในโรงพยาบาลเต็มและไม่ยินยอม ผู้ป่วยอาจต้องรอที่ห้องฉุกเฉินนานขึ้น",
         q3: "3. ยินยอมให้ฝากบัตรประกันสุขภาพไว้ที่โรงพยาบาลหรือไม่?",
+        q3Notice: "※ หากไม่ได้นำบัตรประกันสุขภาพมาด้วย กรุณาเลือก “ไม่”",
         yes: "ยินยอม",
         no: "ไม่ยินยอม",
         preference: "ลำดับความต้องการห้องพัก",
@@ -2061,6 +2067,7 @@ const translations = {
         q2: "2. 隣のベッドが異性の患者でも同意しますか？",
         q2Notice: "院内が満床の場合、同意されないと救急外来での待ち時間が長くなる可能性があります。",
         q3: "3. 健康保険カードを病院でお預かりすることに同意しますか？",
+        q3Notice: "※ 健康保険カードをお持ちでない場合は、「いいえ」を選択してください。",
         yes: "はい",
         no: "いいえ",
         preference: "病室希望順位",
@@ -2101,6 +2108,7 @@ const translations = {
         q2: "2. 옆 침대의 환자가 다른 성별이어도 동의하십니까?",
         q2Notice: "병원 전체가 만실인 경우 동의하지 않으면 응급실에서 더 오래 기다릴 수 있습니다.",
         q3: "3. 건강보험카드를 병원에 맡기는 것에 동의하십니까?",
+        q3Notice: "※ 건강보험카드를 가져오지 않은 경우 “아니요”를 선택해 주세요.",
         yes: "예",
         no: "아니요",
         preference: "병실 희망 순위",
@@ -2275,6 +2283,7 @@ document.getElementById("language").addEventListener("change", function() {
     document.getElementById("q2Text").textContent = t.q2;
     document.getElementById("q2Notice").textContent = t.q2Notice;
     document.getElementById("q3Text").textContent = t.q3;
+    document.getElementById("q3Notice").textContent = t.q3Notice;
 
     document.querySelectorAll(".yesText").forEach(function(item) {
         item.textContent = t.yes;
